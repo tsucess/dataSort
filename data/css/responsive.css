@@ -29,6 +29,14 @@
 
 @media screen and (max-width: 375px) {
    
+    #timeout {
+        
+        font-size           : 1.5rem;
+        width               : 65%;
+        height              : 300px;
+       
+    }
+   
        #top-button-section #sound {
         width              : 50px;
     }
