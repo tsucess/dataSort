@@ -1,0 +1,43 @@
+
+@media screen and (max-width: 425px) {
+   
+    .app {
+        width     : 100%;
+        margin-top: 55px;
+    }
+    .top-section {
+        width           : 90%;
+        height          : 110px;
+    }
+    .board {
+        width           : 90%;
+        height          : 370px;
+    }
+
+    .cell {
+        width              : 9.2%;
+        height             : 32px;
+    }
+
+    .start-row {
+        width           : 90%;
+    }
+    
+   
+}
+
+
+@media screen and (max-width: 375px) {
+}
+
+@media screen and (max-width: 320px) { 
+
+    #top-button-section #sound {
+        width              : 45px;
+    }
+   
+    #pause {
+        width : 60px;
+        margin: 0 15px;
+    }
+} 

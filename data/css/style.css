@@ -1,0 +1,429 @@
+* {
+    box-sizing: border-box;
+    margin    : 0;
+}
+
+body {
+    color           : white;
+    font-family     : 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size       : 0.8rem;
+    text-align      : center;
+    margin          : 0 auto;
+    background-color: #c40093;
+    box-sizing      : border-box;
+}
+
+h1 {
+    padding-bottom: 3px;
+}
+
+.h3Class {
+    color                    : cyan;
+    font-size                : 1rem;
+    letter-spacing           : 0.2rem;
+    visibility               : visible;
+    animation-name           : slide;
+    animation-duration       : 5s;
+    animation-timing-function: ease-in;
+    position                 : relative;
+    top                      : -20px;
+}
+
+@keyframes slide {
+    0% {
+        opacity: 0.5;
+    }
+
+    25% {
+        opacity: 0.25;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+
+    75% {
+        opacity: 0.75;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+h4,
+span {
+    font-size  : 1.3rem;
+    font-weight: bold;
+}
+
+/* Logo Styles  */
+/* #logo-section {
+    /* background-color: blue; *
+    width : 100%;
+    margin: 0 auto;
+
+} */
+
+#dept-logo {
+    margin    : 0 auto;
+    width     : 50%;
+    position  : relative;
+    top       : 100px;
+    z-index   : 1;
+    visibility: hidden;
+
+}
+
+#game-logo {
+    margin    : 0 auto;
+    position  : relative;
+    top       : -90px;
+    width     : 50%;
+    z-index   : 0;
+    visibility: hidden;
+}
+
+/* Animation Style  */
+.logo-visible {
+    visibility               : visible;
+    animation-name           : slideOut;
+    animation-duration       : 5s;
+    animation-timing-function: ease-in;
+}
+
+@keyframes slideOut {
+    0% {
+        opacity: 0.5;
+    }
+
+    25% {
+        opacity: 0.25;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+
+    75% {
+        opacity: 0.75;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+
+/* Game Style  */
+#count-down {
+    padding-top: 10px;
+    font-size  : 2rem;
+    width      : 200px;
+}
+
+
+button {
+    background-color: #642c01;
+    border          : 1px solid white;
+    border-radius   : 5px;
+    color           : white;
+    cursor          : pointer;
+    font-size       : 1rem;
+    font-weight     : bold;
+    margin          : 0px 5px;
+    padding         : 5px 6px;
+}
+
+
+button:hover {
+    background-color: white;
+    color           : #f86d03;
+}
+
+
+#done {
+    display: none;
+    margin : 5px auto;
+    width  : 77%;
+}
+
+
+.container{
+    height: 590px;
+}
+.app {
+    text-align: center;
+    margin    : 0 auto;
+    width     : 450px;
+    margin-top: 5px;
+}
+
+.top-section {
+    background-color: #000000;
+    width           : 94%;
+    height          : 110px;
+    margin          : 0 auto;
+    border          : 5px solid #000000;
+    padding         : 8px 6px;
+}
+
+.board {
+    background-color: #292727;
+    border          : 5px solid #000000;
+    display         : inline-block;
+    padding         : 1%;
+    z-index         : 99;
+    width           : 94%;
+    height          : 430px;
+}
+
+.cell {
+    background-size    : cover;
+    background-position: center;
+    display            : inline-block;
+    margin             : 0 1px;
+    width              : 9.5%;
+    height             : 38px;
+
+}
+
+.cell:hover {
+    background-color: whitesmoke;
+}
+
+.left {
+    background-color: #00ffea;
+}
+
+.right {
+    background-color: #024640;
+}
+
+
+.start-row {
+    background-color: #000000;
+    border          : 5px solid #000000;
+    display         : inline-block;
+    padding         : 0 1%;
+    position        : relative;
+    width           : 94%;
+    z-index         : 1;
+
+}
+
+.start-row .cell {
+    background-color   : #ff9595;
+    background-size    : cover;
+    background-position: center;
+    border-radius      : 10%;
+    margin             : 0 1px;
+    box-sizing         : border-box;
+}
+
+.start-row .cell:hover {
+    border: 1px solid rgb(0, 255, 234);
+}
+
+#top-button-section{
+    margin: 0 auto;
+}
+
+
+#top-button-section #sound {
+    background-image   : url("../images/logo/2.png");
+    background-color   : #642c01;
+    background-size    : contain;
+    background-position: center;
+    background-repeat  : no-repeat;
+    width              : 60px;
+    height             : 29px;
+    margin             : 0 10px;
+    position           : relative;
+    top                : 4px;
+}
+
+
+#inactive-shade {
+    background-color: black;
+    opacity         : 0.5;
+    width           : 100%;
+    height          : 590px;
+    display         : none;
+    z-index         : 999;
+    position        : relative;
+    top             : -590px;
+}
+
+#pause {
+    width : 90px;
+    margin: 0 15px;
+}
+
+
+
+.hidden {
+    display: none;
+    opacity: 0;
+}
+
+#diffSec button {
+    cursor: pointer;
+    margin: 5px 20px;
+
+}
+
+#soundSec {
+    background-color   : #813b3b;
+    border             : 3px solid #ff9595;
+    border-radius      : 10px;
+    /* display         : none; */
+    padding            : 5px;
+    position           : absolute;
+    top                : 180px;
+    left               : 610px;
+    margin             : 0 auto;
+    width              : 140px;
+    z-index            : 99999;
+}
+
+#soundSec button {
+    cursor: pointer;
+    margin: 5px 10px;
+
+}
+
+#helpSec {
+    background-color   : #4b2200;
+    box-shadow         : -1px -1px 3px white;
+    border             : 1px solid white;
+    border-radius      : 10px;
+    display         : none;
+    padding            : 5px;
+    position           : relative;
+    top                : 5px;
+    margin             : 0 auto;
+    width              : 320px;
+    z-index            : 9999999;
+}
+
+#levelSec {
+    background-color: #012925;
+    box-shadow      : -1px -1px 3px white;
+    font-size       : 1.8rem;
+    border-radius   : 10px;
+    display         : none;
+    padding         : 5px;
+    position        : relative;
+    top             : 120px;
+
+    margin : 0 auto;
+    width  : 50%;
+    z-index: 9999999999;
+}
+
+#levelSec p {
+    cursor: pointer;
+}
+
+#helpSec ul li {
+    text-align : left;
+    font-size  : 0.98rem;
+    line-height: 1.8;
+}
+
+#hint {
+    width: 100%;
+}
+
+#close,
+#close3,
+#close4 {
+    cursor: pointer;
+}
+
+#pause2 {
+    border-radius    : 10px;
+    font-size        : 25px;
+    display          : none;
+    position         : relative;
+    top              : -1020px;
+    margin           : 0 auto;
+    width            : 40%;
+    height           : 260px;
+    text-shadow      : 1px 1px 3px #ffffff;
+    z-index          : 999;
+    background-size  : contain;
+    background-repeat: no-repeat;
+    transition       : visibility 6s ease-in;
+}
+
+
+
+#pause2 button {
+    width : 50%;
+    height: 15%;
+    margin: 30px 0 0 0;
+}
+
+#won {
+    background-image    : url("../Images/logo/win.png");
+    background-color    : #001d1a;
+    border-radius       : 10px;
+    color               : #ff0095;
+    font-size           : 1.6rem;
+    visibility       : hidden;
+    padding             : 20px 0;
+    position            : relative;
+    top                 : -1010px;
+    margin              : 0 auto;
+    width               : 50%;
+    height              : 300px;
+    text-shadow         : 1px 1px 3px #ffffff;
+    z-index             : 999;
+    background-size     : contain;
+    background-repeat   : no-repeat;
+    transition          : visibility 6s ease-in;
+}
+
+
+#timeout {
+    background-image    : url("../Images/logo/timeout.png");
+    background-color    : #001d1a;
+    border-radius       : 10px;
+    color               : #ff3c00;
+    font-size           : 1.6rem;
+    visibility       : hidden;
+    position            : relative;
+    top                 : -1310px;
+    margin              : 0 auto;
+    padding             : 20px 0;
+    width               : 50%;
+    height              : 300px;
+    text-shadow         : 1px 1px 3px #000000;
+    z-index             : 999;
+    background-size     : contain;
+    background-repeat   : no-repeat;
+    transition          : visibility 4s ease-in;
+}
+
+#won button {
+    position        : relative;
+    top             : 120px;
+    background-color: transparent;
+    box-shadow      : 2px 2px 3px #ffffff;
+}
+
+#timeout button {
+    position        : relative;
+    top             : 70px;
+    background-color: transparent;
+    box-shadow      : 2px 2px 3px #ffffff;
+}
+
+.current-time {
+    font-size: 3.5rem;
+    margin   : 0 auto;
+    position : relative;
+    top      : 30px;
+}

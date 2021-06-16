@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>game-icon</title>
+    <link rel="stylesheet" href="./data/css/style.css">
+    
+</head>
+<body style ="background-color:black">
+
+
+    <div class="app">
+        <div class="container">
+                <img src="./data/images/logo/Edit departmental logo.png" alt="Departmental Logo" id="dept-logo">
+                <img src="./data/images/logo/GameLogo.png" alt="Game Logo" id="game-logo">
+                <h3 class="h3Class">Loading . . .</h3>
+    
+        </div>
+
+    </div>
+
+ 
+
+   
+    <script>
+        let deptLogo = document.getElementById("dept-logo");
+        let gameLogo = document.getElementById("game-logo");
+
+        function Visible(){
+            deptLogo.className = "logo-visible";
+            deptLogo.style.visibility = "visible";
+
+        }
+        function Hidden(){
+            deptLogo.className = "logo-visible";
+            deptLogo.style.visibility = "hidden";
+        }
+        function Visible2(){
+            gameLogo.className = "logo-visible";
+            gameLogo.style.visibility = "visible";
+        }
+
+        function Redirect() {
+        window.location.assign("data/index.html");
+    }
+
+        setTimeout(Visible, 1000);
+        setTimeout(Hidden, 6000);
+        setTimeout(Visible2, 6000);
+        setTimeout(Redirect, 10000);
+
+        
+    </script>
+</body>
+</html>
